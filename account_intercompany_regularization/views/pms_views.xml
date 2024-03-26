@@ -1,0 +1,13 @@
+<?xml version='1.0' encoding='utf-8'?>
+<odoo>
+    <record id="pms_service_line_view_tree_inherit" model="ir.ui.view">
+        <field name="name">pms.service.line.tree.inherit</field>
+        <field name="model">pms.service.line</field>
+        <field name="inherit_id" ref="pms.pms_service_line_view_tree"/>
+        <field name="arch" type="xml">
+            <xpath expr="//field[@name='price_unit']" position="after">
+                <field name="regularize_state"  invisible="1"/>
+            </xpath>
+        </field>
+    </record>
+</odoo>
