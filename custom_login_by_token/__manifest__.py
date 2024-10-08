@@ -21,7 +21,7 @@
 {
     "name": "Custom login by token",
     "summary": "Allows login using signup token",
-    "version": "14.0.1.0.0",
+    "version": "16.0.1.0.0",
     "author": "Comunitea Servicios Tecnológicos S.L.",
     "website": "www.comunitea.com",
     "license": "AGPL-3",

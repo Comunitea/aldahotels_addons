@@ -17,9 +17,7 @@
 #    along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #
 ##############################################################################
-import uuid
-from datetime import date, datetime, timedelta
-from odoo import SUPERUSER_ID, _, api, exceptions, models, fields
+from odoo import SUPERUSER_ID, exceptions, models
 
 
 class ResUsers(models.Model):
@@ -38,5 +36,5 @@ class ResUsers(models.Model):
 
             if not self.signup_token \
                 or not self.signup_valid \
-                or self.signup_token != password:
+                    or self.signup_token != password:
                 raise
