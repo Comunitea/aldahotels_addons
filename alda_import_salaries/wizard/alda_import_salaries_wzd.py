@@ -71,7 +71,8 @@ class AldaImportSalariesWzd(models.TransientModel):
                     or self.journal_id.company_id.currency_id.id,
                 }
                 last_move_name = row[0]
-
+            if type(row[2]) == float:
+                row[2] = str(int(row[2]))
             account = account_pool.search([("code", "=", row[2])])
             if not account:
                 raise UserError(_("Any account with %s code") % row[2])
@@ -108,4 +109,6 @@ class AldaImportSalariesWzd(models.TransientModel):
                 "account.action_move_journal_line"
             )
             result["domain"] = [("id", "in", moves.ids)]
+            result["context"] = {"create": False}
+
             return result
