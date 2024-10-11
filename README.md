@@ -1,6 +1,6 @@
-[![Runbot Status](https://runbot.odoo-community.org/runbot/badge/flat//14.0.svg)](https://runbot.odoo-community.org/runbot/repo/github-com-oca-aldahotels-)
-[![Build Status](https://travis-ci.com/OCA/aldahotels.svg?branch=14.0)](https://travis-ci.com/OCA/aldahotels)
-[![codecov](https://codecov.io/gh/OCA/aldahotels/branch/14.0/graph/badge.svg)](https://codecov.io/gh/OCA/aldahotels)
+[![Runbot Status](https://runbot.odoo-community.org/runbot/badge/flat//16.0.svg)](https://runbot.odoo-community.org/runbot/repo/github-com-oca-aldahotels-)
+[![Build Status](https://travis-ci.com/OCA/aldahotels.svg?branch=16.0)](https://travis-ci.com/OCA/aldahotels)
+[![codecov](https://codecov.io/gh/OCA/aldahotels/branch/16.0/graph/badge.svg)](https://codecov.io/gh/OCA/aldahotels)
 [![Translation Status](https://translation.odoo-community.org/widgets/aldahotels-14-0/-/svg-badge.svg)](https://translation.odoo-community.org/engage/aldahotels-14-0/?utm_source=widget)
 
 <!-- /!\ do not modify above this line -->
