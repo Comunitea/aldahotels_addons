@@ -36,12 +36,14 @@ class PurchaseRequest(models.Model):
 
     property_id = fields.Many2one('pms.property', string='Property')
 
-    def get_portal_url(self):
-        res = super(PurchaseRequest, self).get_portal_url()
-        portal_link = '/my/purchase_requests/%s' % (self.id) + res
-        if self.state in ["to_approve", "draft"] and not self.review_ids.filtered(lambda r: r.status == 'approved'):
-            portal_link = '/my/new_purchase_request/%s' % (self.id) + res
-        return portal_link
+    @api.depends('state', 'review_ids')
+    def _compute_access_url(self):
+        super(PurchaseRequest, self)._compute_access_url()
+        for purchase_request in self:
+            if purchase_request.state in ["to_approve", "draft"] and not purchase_request.review_ids.filtered(lambda r: r.status == 'approved'):
+                purchase_request.access_url = '/my/new_purchase_request/%s' % (purchase_request.id)
+            else:
+                purchase_request.access_url = '/my/purchase_requests/%s' % (purchase_request.id)
 
     def request_validation(self):
         res = super(PurchaseRequest, self).request_validation()

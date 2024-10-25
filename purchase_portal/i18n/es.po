@@ -4,10 +4,10 @@
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: Odoo Server 16.0\n"
+"Project-Id-Version: Odoo Server 16.0+e\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-10-10 10:04+0000\n"
-"PO-Revision-Date: 2024-10-10 10:04+0000\n"
+"POT-Creation-Date: 2024-10-25 11:41+0000\n"
+"PO-Revision-Date: 2024-10-25 11:41+0000\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
@@ -827,20 +827,6 @@ msgid "Error when sending mail for requested review: %s"
 msgstr "Error enviando el correo para la solicitud de revisión: %s"
 
 #. module: purchase_portal
-#: model_terms:ir.ui.view,arch_db:purchase_portal.import_supplier_data_wizard_form
-msgid ""
-"This wizard allow to import a csv file with the stock of the products.<br/>\n"
-"                    The csv file must contain the columns reference and stock, being reference the supplier code for the product."
-msgstr ""
-"Este asistente permite importar un archivo csv con el stock de los productos.<br/>\n"
-"                    El fichero csv debe contener las columnas reference  y stock, siendo reference el código del proovedor para el producto."
-
-#. module: purchase_portal
-#: model_terms:ir.ui.view,arch_db:purchase_portal.portal_new_purchase_request_page
-msgid "Estimated stock"
-msgstr "Stock estimado"
-
-#. module: purchase_portal
 #: model_terms:ir.ui.view,arch_db:purchase_portal.purchase_order_form
 msgid "Force Confirm Order"
 msgstr "Forzar confirmar"
@@ -987,13 +973,6 @@ msgstr "Múltiples proveedores"
 
 #. module: purchase_portal
 #. odoo-python
-#: code:addons/purchase_portal/models/pos_order.py:0
-#, python-format
-msgid "YOU CAN'T CREATE RESCUE SESSIONS"
-msgstr "NO PUEDES CREAR SESIONES DE RESCATE"
-
-#. module: purchase_portal
-#. odoo-python
 #: code:addons/purchase_portal/controllers/main.py:0
 #: code:addons/purchase_portal/controllers/main.py:0
 #: model:ir.model.fields,field_description:purchase_portal.field_purchase_request_saved_cart__name
@@ -1028,6 +1007,21 @@ msgstr "Opciones"
 #, python-format
 msgid "Origin"
 msgstr "Origen"
+
+#. module: purchase_portal
+#: model_terms:ir.ui.view,arch_db:purchase_portal.portal_stock_picking_page
+msgid "Original Quantity"
+msgstr "Cantidad original"
+
+#. module: purchase_portal
+#: model:ir.model.fields,field_description:purchase_portal.field_stock_move__product_original_qty
+msgid "Original quantity"
+msgstr "Cantidad original"
+
+#. module: purchase_portal
+#: model:ir.model.fields,field_description:purchase_portal.field_stock_move__product_original_qty_uom
+msgid "Original quantity uom"
+msgstr "Unidad de medida cantidad original"
 
 #. module: purchase_portal
 #: model:ir.model.fields,field_description:purchase_portal.field_purchase_request_saved_cart__partner_id
@@ -1312,6 +1306,11 @@ msgid "Status"
 msgstr "Estado"
 
 #. module: purchase_portal
+#: model:ir.model,name:purchase_portal.model_stock_move
+msgid "Stock Move"
+msgstr "Movimiento de stock"
+
+#. module: purchase_portal
 #: model_terms:ir.ui.view,arch_db:purchase_portal.portal_my_stock_pickings
 msgid "Stock picking #"
 msgstr "Albarán #"
@@ -1425,6 +1424,15 @@ msgstr ""
 "\t- {}"
 
 #. module: purchase_portal
+#: model_terms:ir.ui.view,arch_db:purchase_portal.import_supplier_data_wizard_form
+msgid ""
+"This wizard allow to import a csv file with the stock of the products.<br/>\n"
+"                    The csv file must contain the columns reference and stock, being reference the supplier code for the product."
+msgstr ""
+"Este asistente permite importar un archivo CSV con el stock de los productos.<br/>\n"
+"                    El archivo CSV debe contener las columnas referencia y stock, siendo la referencia el código del proveedor para el producto."
+
+#. module: purchase_portal
 #: model:ir.model,name:purchase_portal.model_stock_picking
 msgid "Transfer"
 msgstr "Albarán"
@@ -1459,6 +1467,13 @@ msgstr "Proveedores permitidos en este hotel"
 #: model:ir.model.fields,field_description:purchase_portal.field_pms_property__wharehouse_id
 msgid "Warehouse"
 msgstr "Almacén"
+
+#. module: purchase_portal
+#. odoo-python
+#: code:addons/purchase_portal/models/pos_order.py:0
+#, python-format
+msgid "YOU CAN'T CREATE RESCUE SESSIONS"
+msgstr "NO PUEDES CREAR SESIONES DE RESCATE"
 
 #. module: purchase_portal
 #. odoo-python

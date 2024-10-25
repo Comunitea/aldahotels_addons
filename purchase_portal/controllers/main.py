@@ -241,13 +241,16 @@ class PortalAccount(CustomerPortal):
         return request.render("purchase_portal.portal_my_stock_pickings", values)
 
     @http.route(['/my/stock_pickings/<int:stock_picking>'], type='http', auth="public", website=True)
-    def portal_my_stock_pickings_detail(self, stock_picking, access_token=None, report_type=None, download=False, **kw):
+    def portal_my_stock_pickings_detail(self, stock_picking=None, access_token=None, **kw):
         try:
             stock_picking_sudo = self._document_check_access('stock.picking', stock_picking, access_token)
         except (AccessError, MissingError):
             return request.redirect('/my')
 
         values = self._stock_picking_get_page_view_values(stock_picking_sudo, access_token, **kw)
+
+        if stock_picking_sudo.company_id:
+            values['res_company'] = stock_picking_sudo.company_id
 
         return request.render("purchase_portal.portal_stock_picking_page", values)
 
