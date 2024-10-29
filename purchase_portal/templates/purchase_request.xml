@@ -220,7 +220,7 @@
                                 </t>
                             </select>
                             <input type="hidden" name="csrf_token" t-att-value="request.csrf_token()"/>
-                            <input type="submit" value="Create" class="btn btn-primary float-right" />
+                            <button type="submit" class="btn btn-primary float-right">Create</button>
                         </div>
                     </form>
                     <div class="row mt-4" t-if="purchase_request">
