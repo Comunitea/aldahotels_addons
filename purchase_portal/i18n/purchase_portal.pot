@@ -6,8 +6,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo Server 16.0+e\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-10-29 15:23+0000\n"
-"PO-Revision-Date: 2024-10-29 15:23+0000\n"
+"POT-Creation-Date: 2024-11-13 15:36+0000\n"
+"PO-Revision-Date: 2024-11-13 15:36+0000\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
@@ -607,6 +607,11 @@ msgid "Add"
 msgstr ""
 
 #. module: purchase_portal
+#: model_terms:ir.ui.view,arch_db:purchase_portal.pms_property_views_form
+msgid "Add all seller's products"
+msgstr ""
+
+#. module: purchase_portal
 #: model:ir.model.fields,field_description:purchase_portal.field_purchase_request_saved_cart__add_to_cart_url
 msgid "Add to cart URL"
 msgstr ""
@@ -655,6 +660,7 @@ msgstr ""
 
 #. module: purchase_portal
 #: model:ir.model.fields,field_description:purchase_portal.field_pms_property__product_ids
+#: model:ir.model.fields,field_description:purchase_portal.field_pms_property__product_seller_ids
 msgid "Allowed products"
 msgstr ""
 
@@ -1150,6 +1156,11 @@ msgid "Reference"
 msgstr ""
 
 #. module: purchase_portal
+#: model_terms:ir.ui.view,arch_db:purchase_portal.pms_property_views_form
+msgid "Remove Products Not In Sellers"
+msgstr ""
+
+#. module: purchase_portal
 #: model_terms:ir.ui.view,arch_db:purchase_portal.portal_new_purchase_request_page
 msgid "Request validation"
 msgstr ""
@@ -1408,6 +1419,7 @@ msgid "Validate"
 msgstr ""
 
 #. module: purchase_portal
+#: model:ir.model.fields,field_description:purchase_portal.field_pms_property__seller_commercial_ids
 #: model:ir.model.fields,field_description:purchase_portal.field_pms_property__seller_ids
 msgid "Vendors allowed in this property"
 msgstr ""
