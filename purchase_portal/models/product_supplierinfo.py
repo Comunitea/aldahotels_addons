@@ -29,7 +29,24 @@ class ProductSupplierinfo(models.Model):
     def create(self, values):
         ctx = self.env.context.copy()
         res = super(ProductSupplierinfo, self.with_context(ctx).sudo()).create(values)
-        properties = self.env['pms.property'].search([('seller_ids', 'in', res.partner_id.ids)])
+        properties = self.env['pms.property'].search([
+            '|',
+            ('seller_ids', 'in', res.partner_id.ids),
+            ('seller_commercial_ids', 'in', res.partner_id.ids)
+        ])
+        if properties:
+            properties.onchange_seller_ids()
+        return res
+
+    @api.model
+    def unlink(self):
+        partner_ids = self.mapped('partner_id')
+        properties = self.env['pms.property'].search([
+            '|',
+            ('seller_ids', 'in', partner_ids.ids),
+            ('seller_commercial_ids', 'in', partner_ids.ids)
+        ])
+        res = super(ProductSupplierinfo, self).unlink()
         if properties:
             properties.onchange_seller_ids()
         return res
