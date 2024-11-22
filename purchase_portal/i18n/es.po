@@ -6,8 +6,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo Server 16.0+e\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-11-13 15:36+0000\n"
-"PO-Revision-Date: 2024-11-13 15:36+0000\n"
+"POT-Creation-Date: 2024-11-22 09:28+0000\n"
+"PO-Revision-Date: 2024-11-22 09:28+0000\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
@@ -661,6 +661,11 @@ msgid "Add all seller's products"
 msgstr "Añadir todos los productos de los vendedores"
 
 #. module: purchase_portal
+#: model_terms:ir.ui.view,arch_db:purchase_portal.pms_property_views_form
+msgid "Add sellers and products"
+msgstr "Añadir vendedores y productos"
+
+#. module: purchase_portal
 #: model:ir.model.fields,field_description:purchase_portal.field_purchase_request_saved_cart__add_to_cart_url
 msgid "Add to cart URL"
 msgstr "URL añadir al carrito"
@@ -725,6 +730,7 @@ msgstr "Nombre del fichero CSV"
 
 #. module: purchase_portal
 #: model_terms:ir.ui.view,arch_db:purchase_portal.import_supplier_data_wizard_form
+#: model_terms:ir.ui.view,arch_db:purchase_portal.supplier_products_wizard
 msgid "Cancel"
 msgstr "Cancelar"
 
@@ -745,6 +751,16 @@ msgid "Close"
 msgstr "Cerrar"
 
 #. module: purchase_portal
+#: model:ir.model.fields,field_description:purchase_portal.field_supplier_products_wizard__supplier_commercial_ids
+msgid "Commercial Supplier"
+msgstr "Comercial del proveedor"
+
+#. module: purchase_portal
+#: model_terms:ir.ui.view,arch_db:purchase_portal.supplier_products_wizard
+msgid "Confirm"
+msgstr "Confirmar"
+
+#. module: purchase_portal
 #: model:ir.model,name:purchase_portal.model_res_partner
 #: model_terms:ir.ui.view,arch_db:purchase_portal.portal_purchase_request_page
 #: model_terms:ir.ui.view,arch_db:purchase_portal.portal_saved_cart_page
@@ -761,6 +777,7 @@ msgstr "Crear"
 #: model:ir.model.fields,field_description:purchase_portal.field_import_supplier_data_wizard__create_uid
 #: model:ir.model.fields,field_description:purchase_portal.field_purchase_request_saved_cart__create_uid
 #: model:ir.model.fields,field_description:purchase_portal.field_purchase_request_saved_cart_item__create_uid
+#: model:ir.model.fields,field_description:purchase_portal.field_supplier_products_wizard__create_uid
 msgid "Created by"
 msgstr "Creado por"
 
@@ -768,6 +785,7 @@ msgstr "Creado por"
 #: model:ir.model.fields,field_description:purchase_portal.field_import_supplier_data_wizard__create_date
 #: model:ir.model.fields,field_description:purchase_portal.field_purchase_request_saved_cart__create_date
 #: model:ir.model.fields,field_description:purchase_portal.field_purchase_request_saved_cart_item__create_date
+#: model:ir.model.fields,field_description:purchase_portal.field_supplier_products_wizard__create_date
 msgid "Created on"
 msgstr "Creado el"
 
@@ -805,6 +823,7 @@ msgstr "Descripción"
 #: model:ir.model.fields,field_description:purchase_portal.field_import_supplier_data_wizard__display_name
 #: model:ir.model.fields,field_description:purchase_portal.field_purchase_request_saved_cart__display_name
 #: model:ir.model.fields,field_description:purchase_portal.field_purchase_request_saved_cart_item__display_name
+#: model:ir.model.fields,field_description:purchase_portal.field_supplier_products_wizard__display_name
 msgid "Display Name"
 msgstr "Nombre"
 
@@ -868,9 +887,15 @@ msgid "History"
 msgstr "Historial"
 
 #. module: purchase_portal
+#: model:ir.model.fields,field_description:purchase_portal.field_supplier_products_wizard__hotel_id
+msgid "Hotel"
+msgstr "Holtel"
+
+#. module: purchase_portal
 #: model:ir.model.fields,field_description:purchase_portal.field_import_supplier_data_wizard__id
 #: model:ir.model.fields,field_description:purchase_portal.field_purchase_request_saved_cart__id
 #: model:ir.model.fields,field_description:purchase_portal.field_purchase_request_saved_cart_item__id
+#: model:ir.model.fields,field_description:purchase_portal.field_supplier_products_wizard__id
 msgid "ID"
 msgstr "Identificación"
 
@@ -906,6 +931,7 @@ msgstr "Elementos"
 #: model:ir.model.fields,field_description:purchase_portal.field_import_supplier_data_wizard____last_update
 #: model:ir.model.fields,field_description:purchase_portal.field_purchase_request_saved_cart____last_update
 #: model:ir.model.fields,field_description:purchase_portal.field_purchase_request_saved_cart_item____last_update
+#: model:ir.model.fields,field_description:purchase_portal.field_supplier_products_wizard____last_update
 msgid "Last Modified on"
 msgstr "Última modificación en"
 
@@ -913,6 +939,7 @@ msgstr "Última modificación en"
 #: model:ir.model.fields,field_description:purchase_portal.field_import_supplier_data_wizard__write_uid
 #: model:ir.model.fields,field_description:purchase_portal.field_purchase_request_saved_cart__write_uid
 #: model:ir.model.fields,field_description:purchase_portal.field_purchase_request_saved_cart_item__write_uid
+#: model:ir.model.fields,field_description:purchase_portal.field_supplier_products_wizard__write_uid
 msgid "Last Updated by"
 msgstr "Actualizado por último por"
 
@@ -920,6 +947,7 @@ msgstr "Actualizado por último por"
 #: model:ir.model.fields,field_description:purchase_portal.field_import_supplier_data_wizard__write_date
 #: model:ir.model.fields,field_description:purchase_portal.field_purchase_request_saved_cart__write_date
 #: model:ir.model.fields,field_description:purchase_portal.field_purchase_request_saved_cart_item__write_date
+#: model:ir.model.fields,field_description:purchase_portal.field_supplier_products_wizard__write_date
 msgid "Last Updated on"
 msgstr "Actualizado por última vez el"
 
@@ -1119,6 +1147,7 @@ msgid "Product: <b>{}</b>, quantity: <b>{}</b><br/>"
 msgstr "Producto: <b>{}</b>, cantidad: <b>{}</b><br/>"
 
 #. module: purchase_portal
+#: model:ir.model.fields,field_description:purchase_portal.field_supplier_products_wizard__product_ids
 #: model_terms:ir.ui.view,arch_db:purchase_portal.portal_my_home_purchase_request
 #: model_terms:ir.ui.view,arch_db:purchase_portal.portal_new_purchase_request_page
 #: model_terms:ir.ui.view,arch_db:purchase_portal.portal_purchase_request_page
@@ -1308,6 +1337,7 @@ msgid "Security Token"
 msgstr "Token de seguridad"
 
 #. module: purchase_portal
+#: model:ir.model.fields,field_description:purchase_portal.field_supplier_products_wizard__seller_ids
 #: model_terms:ir.ui.view,arch_db:purchase_portal.portal_new_purchase_request_page
 #: model_terms:ir.ui.view,arch_db:purchase_portal.portal_product_product
 msgid "Seller"
@@ -1358,9 +1388,24 @@ msgid "Supplier Pricelist"
 msgstr "Tarifa de proveedor"
 
 #. module: purchase_portal
+#: model_terms:ir.ui.view,arch_db:purchase_portal.supplier_products_wizard
+msgid "Supplier Products"
+msgstr "Productos del proveedor"
+
+#. module: purchase_portal
+#: model:ir.model,name:purchase_portal.model_supplier_products_wizard
+msgid "Supplier Products Wizard"
+msgstr "Asistente de proveedores y productos"
+
+#. module: purchase_portal
 #: model:ir.model.fields,field_description:purchase_portal.field_product_supplierinfo__supplier_stock
 msgid "Supplier stock"
 msgstr "Stock proveedor"
+
+#. module: purchase_portal
+#: model:ir.model.fields,field_description:purchase_portal.field_supplier_products_wizard__supplier_ids
+msgid "Suppliers"
+msgstr "Proveedores"
 
 #. module: purchase_portal
 #. odoo-python
